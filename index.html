@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Corporate Gifting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+    body{background:#fbf7f2;color:#3a2e2a}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 80px;background:#fffaf4;box-shadow:0 6px 20px rgba(163,123,92,0.12);position:sticky;top:0;z-index:100}
+    header h1{font-size:24px;color:#7a4a2e}
+    nav a{margin-left:30px;text-decoration:none;color:#6b4a3a;font-weight:500}
+    nav a{margin-left:30px;text-decoration:none;color:#6b4a3a;font-weight:500;transition:color 0.3s ease}
+nav a:hover{color:#7fa59a}
+
+    .hero{height:75vh;position:relative;overflow:hidden;color:#fff}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;opacity:0;animation:heroSlide 20s infinite}
+.hero-slide::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,46,42,0.65),rgba(58,46,42,0.75))}
+.hero-slide-content{position:relative;z-index:2}
+.hero-slide h2{font-size:48px;margin-bottom:15px}
+.hero-slide p{font-size:18px;max-width:720px;margin:auto;opacity:0.95}
+.hero-slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1607344645866-009c320b63e0');animation-delay:0s}
+.hero-slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1585386959984-a4155228b34c');animation-delay:5s}
+.hero-slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1519682337058-a94d519337bc');animation-delay:10s}
+.hero-slide:nth-child(4){background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');animation-delay:15s}
+@keyframes heroSlide{0%{opacity:0}5%{opacity:1}25%{opacity:1}30%{opacity:0}100%{opacity:0}}
+
+.hero-controls{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:5}
+.hero-dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer}
+.hero-dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:background 0.3s ease,transform 0.3s ease}
+.hero-dot.active{background:#7fa59a;transform:scale(1.2)}
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:34px;color:#ffffff;cursor:pointer;z-index:5;padding:10px 16px;background:rgba(0,0,0,0.35);border-radius:50%;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.hero-arrow:hover{transform:translateY(-50%) scale(1.1);box-shadow:0 10px 25px rgba(0,0,0,0.35)}
+.hero-arrow.left{left:20px}
+.hero-arrow.right{right:20px}5%{opacity:1}25%{opacity:1}30%{opacity:0}100%{opacity:0}}
+
+    .carousel-section{padding:80px;background:#fffaf4}
+    .carousel-section h3{text-align:center;font-size:34px;margin-bottom:40px;color:#7a4a2e}
+    .carousel{overflow:hidden}
+    .carousel-track{display:flex;width:max-content;gap:30px;animation:scroll 25s linear infinite}
+    .carousel:hover .carousel-track{animation-play-state:paused}
+
+    .carousel-card{min-width:280px;height:180px;border-radius:22px;overflow:hidden;cursor:pointer;box-shadow:0 15px 35px rgba(0,0,0,0.18);position:relative;transition:transform 0.4s ease,box-shadow 0.4s ease}
+.carousel-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 25px 50px rgba(163,123,92,0.35)}
+    .carousel-card img{width:100%;height:100%;object-fit:cover}
+    .carousel-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(127,165,154,0.25),rgba(58,46,42,0.75));display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:600;text-align:center;padding:20px;transition:background 0.4s ease}
+
+    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    .info-section{padding:90px 80px;background:#fbf7f2}
+    .info-section h3{text-align:center;font-size:32px;margin-bottom:40px;color:#2c3e50}
+    .info-card{max-width:900px;margin:0 auto 40px;background:#fffaf4;padding:40px;border-radius:18px;box-shadow:0 15px 40px rgba(163,123,92,0.18);transition:transform 0.4s ease,box-shadow 0.4s ease}
+.info-card:hover{transform:translateY(-6px);box-shadow:0 25px 55px rgba(163,123,92,0.28)}
+    .info-card h4{font-size:24px;margin-bottom:10px;color:#7a4a2e}
+    .info-card p{color:#666;line-height:1.7}
+
+    .catalogue{padding:80px}
+    .catalogue h3{text-align:center;font-size:34px;margin-bottom:60px;color:#2c3e50}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px}
+    .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.08);transition:all .35s}
+    .card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(0,0,0,0.15)}
+    .card img{width:100%;height:220px;object-fit:cover}
+    .card-content{text-align:center;padding:20px}
+
+    footer{background:#7a4a2e;color:#fff;text-align:center;padding:25px;margin-top:80px}
+
+    .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background:linear-gradient(135deg,#7fa59a,#b47b56);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 12px 30px rgba(163,123,92,0.4);transition:transform 0.3s ease,box-shadow 0.3s ease}
+.whatsapp-float:hover{transform:scale(1.12);box-shadow:0 18px 40px rgba(127,165,154,0.45)}
+    .whatsapp-text{position:fixed;bottom:40px;right:100px;background:linear-gradient(135deg,#7fa59a,#b47b56);color:#fff;padding:10px 16px;border-radius:30px;font-size:14px;box-shadow:0 8px 20px rgba(163,123,92,0.35);transition:transform 0.3s ease}
+.whatsapp-text:hover{transform:translateY(-3px)}
+
+    @media(max-width:768px){header{padding:20px 30px}.carousel-section,.catalogue,.info-section{padding:60px 30px}.hero h2{font-size:34px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EliteGifts</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-slide">
+    <div class="hero-slide-content">
+      <h2>Premium Corporate Gifting</h2>
+      <p>Curated gifting solutions for corporates to create memorable impressions with elegance and quality</p>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="hero-slide-content">
+      <h2>Thoughtful Business Gifting</h2>
+      <p>Strengthen professional relationships with meaningful and well curated gift collections</p>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="hero-slide-content">
+      <h2>Luxury and Custom Solutions</h2>
+      <p>Premium executive gifts crafted for leadership clients and brand excellence</p>
+    </div>
+  </div>
+  <div class="hero-slide">
+    <div class="hero-slide-content">
+      <h2>Create Your Own Combo</h2>
+      <p>Design bespoke gifting kits tailored to your audience brand and budget</p>
+    </div>
+  </div>
+  <div class="hero-arrow left" onclick="prevSlide()">‹</div>
+  <div class="hero-arrow right" onclick="nextSlide()">›</div>
+  <div class="hero-controls">
+    <span class="hero-dot" onclick="goSlide(0)"></span>
+    <span class="hero-dot" onclick="goSlide(1)"></span>
+    <span class="hero-dot" onclick="goSlide(2)"></span>
+    <span class="hero-dot" onclick="goSlide(3)"></span>
+  </div>
+</section>
+
+<script>
+let currentSlide=0;
+const slides=document.querySelectorAll('.hero-slide');
+const dots=document.querySelectorAll('.hero-dot');
+function showSlide(i){slides.forEach((s,idx)=>{s.style.opacity=idx===i?'1':'0'});dots.forEach((d,idx)=>{d.classList.toggle('active',idx===i)});currentSlide=i}
+function nextSlide(){showSlide((currentSlide+1)%slides.length)}
+function prevSlide(){showSlide((currentSlide-1+slides.length)%slides.length)}
+function goSlide(i){showSlide(i)}
+showSlide(0);
+setInterval(nextSlide,5000);
+</script>
+
+<!-- Carousel Section -->
+<section class="carousel-section">
+  <h3>Explore Our Gifting Solutions</h3>
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <a href="#combo" class="carousel-card"><img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0"><div class="carousel-overlay">Combo Gifting</div></a>
+      <a href="#corporate" class="carousel-card"><img src="https://images.unsplash.com/photo-1585386959984-a4155228b34c"><div class="carousel-overlay">Corporate Gifting</div></a>
+      <a href="#luxury" class="carousel-card"><img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc"><div class="carousel-overlay">Luxury Gifting</div></a>
+      <a href="#custom" class="carousel-card"><img src="https://images.unsplash.com/photo-1585386959984-40d8db8e40f1"><div class="carousel-overlay">Custom Gifting</div></a>
+      <a href="#make" class="carousel-card"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"><div class="carousel-overlay">Make Your Own Combo</div></a>
+
+      <!-- duplicate for infinite loop -->
+      <a href="#combo" class="carousel-card"><img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0"><div class="carousel-overlay">Combo Gifting</div></a>
+      <a href="#corporate" class="carousel-card"><img src="https://images.unsplash.com/photo-1585386959984-a4155228b34c"><div class="carousel-overlay">Corporate Gifting</div></a>
+      <a href="#luxury" class="carousel-card"><img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc"><div class="carousel-overlay">Luxury Gifting</div></a>
+      <a href="#custom" class="carousel-card"><img src="https://images.unsplash.com/photo-1585386959984-40d8db8e40f1"><div class="carousel-overlay">Custom Gifting</div></a>
+      <a href="#make" class="carousel-card"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"><div class="carousel-overlay">Make Your Own Combo</div></a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Info Sections -->
+<section class="info-section">
+
+  <div id="combo" class="info-card">
+    <h4>Combo Gifting</h4>
+    <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0" style="width:100%;border-radius:14px;margin:20px 0">
+    <p>Our combo gifting solutions are thoughtfully curated sets of complementary products such as bags bottles diaries and desk accessories. These combos are ideal for onboarding kits festive gifting and bulk corporate distribution while ensuring value consistency and premium presentation.</p>
+  </div>
+
+  <div id="corporate" class="info-card">
+    <h4>Corporate Gifting</h4>
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155228b34c" style="width:100%;border-radius:14px;margin:20px 0">
+    <p>Corporate gifting focuses on professional and brand aligned products designed for employees clients and partners. From conferences to annual milestones our solutions strengthen relationships and reinforce brand recall with quality and elegance.</p>
+  </div>
+
+  <div id="luxury" class="info-card">
+    <h4>Luxury Gifting</h4>
+    <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc" style="width:100%;border-radius:14px;margin:20px 0">
+    <p>Luxury gifting is curated for premium clientele and leadership teams. These high end gifts include superior materials exclusive packaging and refined aesthetics making them perfect for VIP clients and executive recognition.</p>
+  </div>
+
+  <div id="custom" class="info-card">
+    <h4>Custom Gifting</h4>
+    <img src="https://images.unsplash.com/photo-1585386959984-40d8db8e40f1" style="width:100%;border-radius:14px;margin:20px 0">
+    <p>Custom gifting allows complete personalization including logo branding color themes packaging and messaging. This option ensures your gifts align seamlessly with your corporate identity and campaign objectives.</p>
+  </div>
+
+  <div id="make" class="info-card">
+    <h4>Make Your Own Combo</h4>
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" style="width:100%;border-radius:14px;margin:20px 0">
+    <p>This flexible option lets you select individual items from our catalogue and create a bespoke gift set. Ideal for tailored budgets specific audiences and unique gifting requirements.</p>
+  </div>
+
+</section>
+
+<!-- Catalogue moved to separate page -->
+
+<footer>
+  <p>© 2025 Elite Corporate Gifting All Rights Reserved</p>
+</footer>
+
+
+<a href="https://wa.me/917388006640?text=Hello%20I%20am%20interested%20in%20corporate%20gifting" target="_blank" class="whatsapp-float">💬</a>
+<div class="whatsapp-text">Order on WhatsApp</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogue | Elite Corporate Gifting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+    body{background:#fbf7f2;color:#3a2e2a}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 80px;background:#fffaf4;box-shadow:0 6px 20px rgba(163,123,92,0.12);position:sticky;top:0;z-index:100}
+    header h1{font-size:24px;color:#7a4a2e}
+    nav a{margin-left:30px;text-decoration:none;color:#6b4a3a;font-weight:500;transition:color .3s}
+    nav a:hover{color:#7fa59a}
+
+    .page-hero{
+      padding:80px;
+      background:linear-gradient(180deg,rgba(58,46,42,0.65),rgba(58,46,42,0.8)),
+      url('https://images.unsplash.com/photo-1607344645866-009c320b63e0');
+      background-size:cover;
+      background-position:center;
+      text-align:center;
+      color:#fff;
+    }
+
+    .page-hero h2{font-size:42px;margin-bottom:10px}
+    .page-hero p{opacity:.95}
+
+    .catalogue{padding:90px 80px}
+    .catalogue h3{text-align:center;font-size:34px;margin-bottom:60px;color:#7a4a2e}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px}
+
+    .card{background:#fffaf4;border-radius:18px;overflow:hidden;box-shadow:0 15px 40px rgba(163,123,92,0.18);transition:transform .4s,box-shadow .4s}
+    .card:hover{transform:translateY(-10px);box-shadow:0 25px 55px rgba(163,123,92,0.28)}
+
+    .card img{width:100%;height:220px;object-fit:cover}
+
+    .card-content{text-align:center;padding:22px}
+    .card-content h4{font-size:18px;margin-bottom:6px;color:#7a4a2e}
+    .card-content p{font-size:14px;color:#6b4a3a;margin-bottom:14px}
+
+    .card-content a{
+      display:inline-block;
+      padding:8px 18px;
+      border-radius:25px;
+      background:linear-gradient(135deg,#7fa59a,#b47b56);
+      color:#fff;
+      font-size:13px;
+      text-decoration:none;
+      transition:transform .3s,box-shadow .3s
+    }
+    .card-content a:hover{transform:scale(1.08);box-shadow:0 10px 25px rgba(127,165,154,0.45)}
+
+    footer{background:#7a4a2e;color:#fff;text-align:center;padding:25px;margin-top:80px}
+
+    .whatsapp-float{
+      position:fixed;width:60px;height:60px;bottom:30px;right:30px;
+      background:linear-gradient(135deg,#7fa59a,#b47b56);
+      color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
+      font-size:30px;text-decoration:none;
+      box-shadow:0 12px 30px rgba(163,123,92,0.4);
+      transition:transform .3s,box-shadow .3s
+    }
+    .whatsapp-float:hover{transform:scale(1.12);box-shadow:0 18px 40px rgba(127,165,154,0.45)}
+
+    @media(max-width:768px){header{padding:20px 30px}.catalogue,.page-hero{padding:60px 30px}.page-hero h2{font-size:32px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EliteGifts</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h2>Our Product Catalogue</h2>
+  <p>Premium corporate gifting products curated with elegance</p>
+</section>
+
+<section class="catalogue">
+  <h3>Catalogue Categories</h3>
+
+  <div class="products">
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"><div class="card-content"><h4>Bags</h4><p>Office backpacks and travel bags</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1526401485004-2aa6c9e03b05"><div class="card-content"><h4>Bottles</h4><p>Reusable premium bottles</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5"><div class="card-content"><h4>Mugs</h4><p>Coffee and travel mugs</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1585386959984-a4155228b34c"><div class="card-content"><h4>Pens</h4><p>Executive branded pens</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93"><div class="card-content"><h4>Belts</h4><p>Elegant corporate belts</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"><div class="card-content"><h4>Artificial Plants</h4><p>Decorative desk plants</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6"><div class="card-content"><h4>Purse</h4><p>Minimal premium purses</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc"><div class="card-content"><h4>Diaries</h4><p>Notebooks and planners</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1585386959984-40d8db8e40f1"><div class="card-content"><h4>Pen Stands</h4><p>Modern desk organizers</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+    <div class="card"><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04"><div class="card-content"><h4>Mouse Pads</h4><p>Comfortable work pads</p><a href="https://wa.me/917388006640">Enquire</a></div></div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Elite Corporate Gifting All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/917388006640?text=Hello%20I%20am%20interested%20in%20your%20corporate%20gifting%20catalogue" target="_blank" class="whatsapp-float">💬</a>
+
+</body>
+</html>
